@@ -69,11 +69,20 @@ nav {
       button {
         margin-top: 3rem;
         background: #571A82;
-        color: #c4c4c4;
         border-radius: 1rem;
         border: none;
         padding: 1rem 2rem;
         font-size: 1.5rem;
+        -webkit-box-shadow: 1px 10px 3px -1px rgba(0,0,0,0.77);
+        box-shadow: 1px 10px 3px -1px rgba(0,0,0,0.77);
+        a{
+          color: #c4c4c4;
+          text-decoration: none;
+
+          &:hover{
+            color: #fff2f2;
+          }
+        }
       }
     }
 
