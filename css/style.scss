@@ -28,7 +28,6 @@ nav {
   height: 95vh;
   background: url("../img/White-Modern-Background.jpg") no-repeat center center/cover;
 
-
   .logo img {
     height: 10rem;
     width: 10rem;
@@ -190,19 +189,32 @@ nav {
 
 footer {
   background: #202020;
-  display: grid;
-  grid-template-columns: 2fr 2fr 1fr;
+  display: flex;
+
+  .app-stores {
+    display: flex;
+
+    a img {
+      border: 1px solid white;
+      height: 250px;
+      width: 500px;
+    }
+  }
 
   .footer-info {
-    display: grid;
+    width: 100%;
+    display: flex;
     flex-flow: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 
     ul {
+      height: 80%;
+
       li {
         text-decoration: none;
-        margin: 2rem 0;
+        height: 25%;
+        text-align: center;
       }
 
       a {
@@ -215,5 +227,126 @@ footer {
         }
       }
     }
+  }
+}
+@media screen and (max-width:768px) {
+  .upper .logo img {
+    height: 5rem;
+    width: 5rem;
+  }
+
+  .upper .main-info {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-content: center;
+  }
+
+  .upper .main-info .landing-info {
+    grid-row: 1/2;
+  }
+
+  .upper .main-info .card-pic {
+    grid-row: 2/3;
+    margin-top: 2rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  .upper .main-info .card-pic img {
+    width: 50%;
+    margin-left: 3rem;
+  }
+
+  .middle {
+    display: flex;
+  }
+
+  .middle .middle-container {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .middle .security {
+    height: 100%;
+    width: 100%;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .middle .account,
+  .middle .rewards {
+    height: 100%;
+    width: 100%;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  footer .app-stores {
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  footer .app-stores a img {
+    border: 1px solid white;
+    height: 100px;
+    width: 250px;
+  }
+}
+@media screen and (max-width:1024px) {
+  footer .app-stores a img {
+    border: 1px solid white;
+    height: 100px;
+    width: 250px;
+  }
+
+  .middle {
+    display: flex;
+  }
+
+  .middle .middle-container {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .middle .security {
+    height: 100%;
+    width: 100%;
+
+    p {
+      margin: 0;
+      font-size: 1.15rem;
+    }
+
+    h5 {
+      font-size: 1.5rem;
+    }
+  }
+
+  .middle .account,
+  .middle .rewards {
+    height: 100%;
+    width: 100%;
+
+    p {
+      margin: 0;
+      font-size: 1.15rem;
+    }
+
+    h5 {
+      font-size: 1.5rem;
+    }
+  }
+
+  .lower img {
+    height: 300px;
   }
 }
