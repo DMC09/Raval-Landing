@@ -46,7 +46,7 @@ nav {
       grid-row: 1/5;
 
       h1 {
-        font-size: 4rem;
+        font-size: 8rem;
         margin-bottom: 2rem;
         letter-spacing: 0.75rem;
         background: -webkit-linear-gradient(#31126A 0%, #ccc6d8 100%);
@@ -93,15 +93,16 @@ nav {
       grid-row: 1/4;
 
       img {
-        height: 75%;
-        width: 75%;
+        height: 70%;
+        width: 70%;
+        margin-right: 2rem;
       }
     }
   }
 }
 
 .middle {
-  background: url("../img/Protruding-Squares.png") no-repeat center center/cover;
+background: #e5e5e5;
   height: 75vh;
   display: flex;
   justify-content: center;
@@ -115,63 +116,40 @@ nav {
   }
 
   .account,
-  .rewards {
+  .rewards,
+  .security {
     height: 70%;
     display: flex;
     flex-flow: column;
     align-items: center;
-    background: #c4c4c4;
+    background: #706A88;
     text-align: center;
 
     i {
       height: 25%;
       font-size: 3rem;
       padding-top: 1.5rem;
-      color: #571A82;
+      color: #e5e5e5;
     }
 
     h5 {
       font-size: 2.5rem;
       height: 25%;
-      color: #571A82;
+      color: #e5e5e5;
     }
 
     p {
       font-size: 1.5rem;
       height: 50%;
-      color: #571A82;
+      color: #e5e5e5;
       margin: 0 5rem;
     }
   }
 
-  .security {
-    height: 80%;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    background: #571A82;
-    text-align: center;
-
-    i {
-      height: 25%;
-      font-size: 3rem;
-      padding-top: 1.5rem;
-      color: #c4c4c4;
-    }
-
-    h5 {
-      font-size: 2.5rem;
-      height: 25%;
-      color: #c4c4c4;
-    }
-
-    p {
-      font-size: 1.5rem;
-      height: 50%;
-      color: #c4c4c4;
-      margin: 0 5rem;
-    }
-  }
+.security{
+  border-left: 2px solid #e5e5e5;
+  border-right: 2px solid #e5e5e5;
+}
 }
 
 .lower {
@@ -195,9 +173,6 @@ footer {
     display: flex;
 
     a img {
-      border: 1px solid white;
-      height: 250px;
-      width: 500px;
     }
   }
 
@@ -214,7 +189,7 @@ footer {
       li {
         text-decoration: none;
         height: 25%;
-        text-align: center;
+        text-align: left;
       }
 
       a {
