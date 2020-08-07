@@ -22,21 +22,64 @@ nav {
     li {
       text-decoration: none;
       font-size: 1rem;
+      a {
+        text-decoration: none;
+        color: white;
+      }
     }
   }
 }
 
-.hero{
+.hero {
   height: 90vh;
-  background: url(../img/White-Modern-Background.jpg) no-repeat center center/cover;
+  background: url(../img/White-Modern-Background.jpg) no-repeat center
+    center/cover;
 
-  .hero-info{
-    border: 1px solid red;
-    h1{
-      color: hsla(258, 70%, 18%,0.6);
+  .hero-info {
+    border: 2px solid blue;
+    // height: 20vh;
+    h1 {
+      font-size: 12rem;
+      text-align: center;
+      margin: 2rem 0;
+      letter-spacing: 0.75rem;
+      background: -webkit-linear-gradient(#31126a 0%, #ccc6d8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    p:first-of-type {
+      color: #191919;
+      font-size: 5rem;
+      text-align: center;
+    }
+    p:last-of-type {
+      color: #666666;
+      font-size: 3.25rem;
+      text-align: center;
+      font-style: italic;
+      font-weight: 100;
     }
   }
-  .card-container{
-    border: 1px solid red;
+  .card-container {
+    // height: 70vh;
+    border: 2px solid red;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    img {
+      // height: 33%;
+      width: auto;
+    }
+    button {
+      padding: 1rem;
+      margin: 4rem;
+      border: 0;
+    }
   }
+}
+
+.features{
+  background: green;
+  height: 500px;
 }
