@@ -1,9 +1,12 @@
 @import "./reset.css";
+@import "./vars.scss";
+$nav-bg: #706a88;
 
 nav {
   height: 10vh;
-  background: #706a88;
+  background: $nav-bg;
   display: flex;
+
 
   .img-container {
     height: 100%;
@@ -80,6 +83,38 @@ nav {
 }
 
 .features{
-  background: green;
-  height: 500px;
+  // height: 500px;
+max-width: 90%;
+margin: 0 auto;
+border-radius: 10px;
+height: 1200px;
+display: flex;
+justify-content: center;
+
+.feat_container{
+  display: flex;
+flex-flow: column;
+
+justify-content: space-evenly;
+
+}
+}
+
+.account,.security,.rewards{
+  background: $nav-bg;
+height: 375px;
+  text-align: center;
+  border-radius: 10px;
+  i{
+    font-size: 3.5rem;
+    color: $feat-bg;
+  }
+  h1{
+    font-size: 3.5rem;
+    color: $feat-bg;
+  }
+  p{
+    font-size: 2rem;
+    color: $feat-bg;
+  }
 }
