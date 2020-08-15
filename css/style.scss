@@ -1,5 +1,6 @@
 @import "./reset.css";
 @import "./vars.scss";
+@import "./mixins.scss";
 $nav-bg: #706a88;
 
 nav {
@@ -145,7 +146,7 @@ nav {
 
     .img-header {
       background: #696969;
-border-bottom: 2px solid $feat-bg;
+      border-bottom: 2px solid $feat-bg;
       text-align: center;
       padding: 1rem;
       flex-basis: 25%;
@@ -171,5 +172,138 @@ border-bottom: 2px solid $feat-bg;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    &::before {
+      content: open-quote;
+      position: relative;
+      bottom: 70px;
+      color: $primary;
+      font-weight: bold;
+      font-size: 100px;
+    }
+    &::after {
+      content: close-quote;
+      position: relative;
+      bottom: -70px;
+      color: $primary;
+      font-weight: bold;
+      font-size: 100px;
+    }
+  }
+}
+
+.top {
+  background: $secondary;
+  display: flex;
+  flex-flow: row;
+
+
+  .legal {
+    flex-basis: 50%;
+    padding: 1rem 1.5rem;
+    p {
+      @include footer-title;
+    }
+    ul {
+      height: 300px;
+      display: flex;
+      flex-flow: column;
+      justify-content: space-evenly;
+      li {
+        a {
+          text-decoration: none;
+          font-size: 1.25rem;
+          color: darken($secondary, 40%);
+        }
+      }
+    }
+  }
+  .resources {
+    flex-basis: 50%;
+    padding: 1rem 1.5rem;
+    p {
+      @include footer-title;
+    }
+    ul {
+      height: 300px;
+      display: flex;
+      flex-flow: column;
+      justify-content: space-evenly;
+      li {
+        a {
+          text-decoration: none;
+          font-size: 1.25rem;
+          color: darken($secondary, 40%);
+        }
+      }
+    }
+  }
+}
+
+.bottom {
+  background: $secondary;
+  display: flex;
+  flex-flow: row;
+  .socials {
+    flex-basis: 50%;
+    padding: 1rem 1.5rem;
+    p {
+      @include footer-title;
+    }
+    ul {
+      height: 300px;
+      display: flex;
+      flex-flow: column;
+      justify-content: space-evenly;
+      li {
+        a {
+          text-decoration: none;
+          font-size: 1.25rem;
+          color: darken($secondary, 40%);
+          transition: all 0.1s ease-in-out;
+          &:hover {
+            color: $tertiary;
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+  }
+  .email {
+    flex-basis: 50%;
+    padding: 1rem 1.5rem;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    input {
+      margin: 0;
+      padding: 0;
+      width: 300px;
+      height: 75px;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      border: none;
+      line-height: 75px;
+      font-size: 1.5rem;
+      color: darken($secondary, 40%);
+      &::placeholder {
+        color: darken($secondary, 40%);
+        padding-left: 1.5rem;
+        font-size: 1.5rem;
+      }
+    }
+    button {
+      margin: 0;
+      padding: 0;
+      background: $primary;
+      color: $tertiary;
+      border: 1px solid $primary;
+      height: 75px;
+      width: 300px;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      font-size: 1.5rem;
+    }
   }
 }
