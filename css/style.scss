@@ -42,8 +42,7 @@ nav {
     h1 {
       font-size: 12rem;
       text-align: center;
-
-      margin: 2rem 0;
+      margin: 3rem 0;
       letter-spacing: 0.75rem;
       background: -webkit-linear-gradient(#31126a 0%, #ccc6d8 100%);
       -webkit-background-clip: text;
@@ -51,7 +50,7 @@ nav {
     }
     p {
       color: #464646;
-      font-size: 5rem;
+      font-size: 3.5rem;
       font-weight: lighter;
       text-align: center;
       font-style: italic;
@@ -145,8 +144,9 @@ nav {
     justify-content: center;
 
     .img-header {
-      background: #696969;
-      border-bottom: 2px solid $feat-bg;
+      background: #d3d3d3;
+      border-bottom: 2px solid black;
+      border-right: 2px solid black;
       text-align: center;
       padding: 1rem;
       flex-basis: 25%;
@@ -154,13 +154,14 @@ nav {
         padding: 1rem 0.5rem;
         font-size: 2rem;
         text-align: center;
-        color: white;
+        color: black;
       }
     }
     img {
       height: 150px;
       width: 150px;
       border-radius: 50%;
+      border: 2px solid black;
     }
   }
   p.feat_desc {
