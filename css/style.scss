@@ -89,11 +89,13 @@ nav {
 .account,
 .security,
 .rewards {
-  background: #4f238c;
+  background: $primary;
   padding: 1.5rem 1rem;
   height: 350px;
   display: flex;
   align-items: center;
+border-top: 1px solid $tertiary;
+border-bottom: 1px solid $tertiary;
 
   i {
     font-size: 6rem;
@@ -106,18 +108,19 @@ nav {
   .icon-container {
     flex-basis: 66%;
     height: 250px;
-    text-align: center;
+
     display: flex;
     flex-flow: column;
     justify-content: space-around;
+    padding: 0 2rem ;
 
     h1 {
-      font-size: 3.5rem;
+      font-size: 3rem;
       color: $tertiary;
       text-align: left;
     }
     p {
-      font-size: 2rem;
+      font-size: 2.5rem;
       color: $tertiary;
       text-align: left;
     }
@@ -155,7 +158,7 @@ nav {
   }
   p.quote {
     background: #d3d3d3;
-    font-size: 1.75rem;
+    font-size: 2rem;
     flex-basis: 75%;
     padding: 1rem 2rem;
     display: flex;
@@ -189,6 +192,10 @@ nav {
     justify-content: space-around;
     align-items: center;
     padding: 1rem 0;
+    img{
+
+      @include img-bg;
+    }
     img:nth-of-type(1) {
       height:500px;
       width: 90%;
@@ -241,8 +248,12 @@ footer {
         li {
           a {
             text-decoration: none;
-            font-size: 1.25rem;
+            font-size: 2rem;
             color: darken($secondary, 40%);
+            &:hover {
+              color: $tertiary;
+              transform: scale(1.1);
+            }
           }
         }
       }
@@ -261,8 +272,12 @@ footer {
         li {
           a {
             text-decoration: none;
-            font-size: 1.25rem;
+            font-size: 2rem;
             color: darken($secondary, 40%);
+            &:hover {
+              color: $tertiary;
+              transform: scale(1.1);
+            }
           }
         }
       }
@@ -273,7 +288,7 @@ footer {
     display: flex;
     flex-flow: row;
     .socials {
-      flex-basis: 50%;
+      flex-basis: 40%;
       padding: 1rem 1.5rem;
       p {
         @include footer-title;
@@ -286,7 +301,7 @@ footer {
         li {
           a {
             text-decoration: none;
-            font-size: 1.25rem;
+            font-size: 2rem;
             color: darken($secondary, 40%);
             transition: all 0.1s ease-in-out;
             &:hover {
@@ -298,8 +313,8 @@ footer {
       }
     }
     .email {
-      flex-basis: 50%;
-      padding: 1rem 1.5rem;
+      flex-basis: 60%;
+
       display: flex;
       flex-flow: column;
       justify-content: center;
@@ -307,7 +322,7 @@ footer {
       input {
         margin: 0;
         padding: 0;
-        width: 300px;
+        width: 350px;
         height: 75px;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
@@ -328,7 +343,7 @@ footer {
         color: $tertiary;
         border: 1px solid $primary;
         height: 75px;
-        width: 300px;
+        width: 350px;
         border-bottom-left-radius: 10px;
         border-bottom-right-radius: 10px;
         font-size: 1.5rem;
