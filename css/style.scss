@@ -134,12 +134,17 @@ nav {
     flex-flow: row;
     justify-content: center;
     border: 1px solid black;
-    .img-header {
+    .profile_container {
       background: #d3d3d3;
       border-right: 2px solid black;
       text-align: center;
       padding: 1rem;
       flex-basis: 25%;
+      img {
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+      }
       p.name_tag {
         padding: 1rem 0.5rem;
         font-size: 2rem;
@@ -147,22 +152,15 @@ nav {
         color: black;
       }
     }
-    img {
-      height: 150px;
-      width: 150px;
-      border-radius: 50%;
-    }
   }
   p.quote {
     background: #d3d3d3;
-
     font-size: 1.75rem;
     flex-basis: 75%;
     padding: 1rem 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
-
     &::before {
       content: open-quote;
       position: relative;
@@ -181,117 +179,160 @@ nav {
     }
   }
 }
-.top {
-  background: $secondary;
-  display: flex;
-  flex-flow: row;
 
+.gallery {
+  background: #464646;
+  .img_container {
+    height: 2100px;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem 0;
+    img:nth-of-type(1) {
+      height:500px;
+      width: 90%;
+      // background: url("../img/airport.jpg") no-repeat center center/cover;
+      background-image: url("../img/airport.jpg");
+      background-position: center;
+      background-size: cover;
+    }
+    img:nth-of-type(2) {
+      height:500px;
+      width: 90%;
 
-  .legal {
-    flex-basis: 50%;
-    padding: 1rem 1.5rem;
-    p {
-      @include footer-title;
+      background-image: url("../img/restaurant.jpg");
+      background-position: center;
+      background-size: cover;
     }
-    ul {
-      height: 300px;
-      display: flex;
-      flex-flow: column;
-      justify-content: space-evenly;
-      li {
-        a {
-          text-decoration: none;
-          font-size: 1.25rem;
-          color: darken($secondary, 40%);
-        }
-      }
+    img:nth-of-type(3) {
+      height:500px;
+      width: 90%;
+      background-image: url("../img/shopping.jpg");
+      background-position: center;
+      background-size: cover;
     }
-  }
-  .resources {
-    flex-basis: 50%;
-    padding: 1rem 1.5rem;
-    p {
-      @include footer-title;
-    }
-    ul {
-      height: 300px;
-      display: flex;
-      flex-flow: column;
-      justify-content: space-evenly;
-      li {
-        a {
-          text-decoration: none;
-          font-size: 1.25rem;
-          color: darken($secondary, 40%);
-        }
-      }
+    img:nth-of-type(4) {
+      height:500px;
+      width: 90%;
+      background-image: url("../img/vacation.jpg");
+      background-position: center;
+      background-size: cover;
     }
   }
 }
-.bottom {
-  background: $secondary;
-  display: flex;
-  flex-flow: row;
-  .socials {
-    flex-basis: 50%;
-    padding: 1rem 1.5rem;
-    p {
-      @include footer-title;
+
+footer {
+  .top {
+    background: $secondary;
+    display: flex;
+    flex-flow: row;
+    .legal {
+      flex-basis: 50%;
+      padding: 1rem 1.5rem;
+      p {
+        @include footer-title;
+      }
+      ul {
+        height: 300px;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-evenly;
+        li {
+          a {
+            text-decoration: none;
+            font-size: 1.25rem;
+            color: darken($secondary, 40%);
+          }
+        }
+      }
     }
-    ul {
-      height: 300px;
-      display: flex;
-      flex-flow: column;
-      justify-content: space-evenly;
-      li {
-        a {
-          text-decoration: none;
-          font-size: 1.25rem;
-          color: darken($secondary, 40%);
-          transition: all 0.1s ease-in-out;
-          &:hover {
-            color: $tertiary;
-            transform: scale(1.1);
+    .resources {
+      flex-basis: 50%;
+      padding: 1rem 1.5rem;
+      p {
+        @include footer-title;
+      }
+      ul {
+        height: 300px;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-evenly;
+        li {
+          a {
+            text-decoration: none;
+            font-size: 1.25rem;
+            color: darken($secondary, 40%);
           }
         }
       }
     }
   }
-  .email {
-    flex-basis: 50%;
-    padding: 1rem 1.5rem;
+  .bottom {
+    background: $secondary;
     display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
-    input {
-      margin: 0;
-      padding: 0;
-      width: 300px;
-      height: 75px;
-      border-top-left-radius: 10px;
-      border-top-right-radius: 10px;
-      border: none;
-      line-height: 75px;
-      font-size: 1.5rem;
-      color: darken($secondary, 40%);
-      &::placeholder {
-        color: darken($secondary, 40%);
-        padding-left: 1.5rem;
-        font-size: 1.5rem;
+    flex-flow: row;
+    .socials {
+      flex-basis: 50%;
+      padding: 1rem 1.5rem;
+      p {
+        @include footer-title;
+      }
+      ul {
+        height: 300px;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-evenly;
+        li {
+          a {
+            text-decoration: none;
+            font-size: 1.25rem;
+            color: darken($secondary, 40%);
+            transition: all 0.1s ease-in-out;
+            &:hover {
+              color: $tertiary;
+              transform: scale(1.1);
+            }
+          }
+        }
       }
     }
-    button {
-      margin: 0;
-      padding: 0;
-      background: $primary;
-      color: $tertiary;
-      border: 1px solid $primary;
-      height: 75px;
-      width: 300px;
-      border-bottom-left-radius: 10px;
-      border-bottom-right-radius: 10px;
-      font-size: 1.5rem;
+    .email {
+      flex-basis: 50%;
+      padding: 1rem 1.5rem;
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      align-items: center;
+      input {
+        margin: 0;
+        padding: 0;
+        width: 300px;
+        height: 75px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border: none;
+        line-height: 75px;
+        font-size: 1.5rem;
+        color: darken($secondary, 40%);
+        &::placeholder {
+          color: darken($secondary, 40%);
+          padding-left: 1.5rem;
+          font-size: 1.5rem;
+        }
+      }
+      button {
+        margin: 0;
+        padding: 0;
+        background: $primary;
+        color: $tertiary;
+        border: 1px solid $primary;
+        height: 75px;
+        width: 300px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        font-size: 1.5rem;
+      }
     }
   }
 }
