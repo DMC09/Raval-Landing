@@ -6,6 +6,8 @@
 
 @mixin img-bg {
   border-radius: 10px;
+  height:500px;
+  width: 95%;
   background: linear-gradient(45deg, #4b4b4b, #3f3f3f);
   box-shadow:  6px -6px 15px #383838,
                -6px 6px 15px #545454;
