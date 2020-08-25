@@ -1,6 +1,7 @@
 @import "./reset.css";
 @import "./vars.scss";
 @import "./mixins.scss";
+@import "./mquery.scss";
 // nav
 nav {
   height: 10vh;
@@ -8,14 +9,14 @@ nav {
   display: flex;
   .logo-container {
     height: 100%;
-    flex-basis: 60%;
+    flex-basis: 50%;
     img {
       height: 100%;
       width: auto;
     }
   }
   ul {
-    flex-basis: 40%;
+    flex-basis: 50%;
     height: 100%;
     display: flex;
     justify-content: space-around;
@@ -25,7 +26,7 @@ nav {
       a {
         text-decoration: none;
         color: white;
-        font-size: 2rem;
+        font-size: 1.5rem;
       }
     }
   }
@@ -37,7 +38,7 @@ nav {
     center/cover;
   .hero-info {
     h1 {
-      font-size: 8rem;
+      font-size: 5rem;
       text-align: center;
       padding: 2rem 0;
       letter-spacing: 0.75rem;
@@ -47,26 +48,25 @@ nav {
     }
     p {
       color: #464646;
-      font-size: 2.5rem;
+      font-size: 2rem;
       font-weight: lighter;
       text-align: center;
       font-style: italic;
     }
   }
   .card-container {
-    // height: 70vh;
-    margin-top: 13rem;
     display: flex;
+    margin-top: 4rem;
     flex-flow: column;
     justify-content: center;
     align-items: center;
     img {
-      height: 25rem;
-      width: auto;
+      height: 200px;
+      width: 500px;
     }
     p {
       margin-top: 6rem;
-      font-size: 4rem;
+      font-size: $quote;
     }
     i {
       font-size: 2.5rem;
@@ -77,20 +77,13 @@ nav {
   }
 }
 .features {
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
   .feat_container {
-    display: flex;
-    flex-flow: column;
-    justify-content: space-evenly;
   }
 }
 .account,
 .security,
 .rewards {
   background: $primary;
-  padding: 1.5rem 1rem;
   height: 350px;
   display: flex;
   align-items: center;
@@ -101,37 +94,36 @@ nav {
     font-size: 6rem;
     color: $tertiary;
     height: 250px;
-    flex-basis: 33%;
+    flex-basis: 30%;
     display: grid;
     place-items: center;
+    padding: 2.5rem 1rem;
   }
   .icon-container {
-    flex-basis: 66%;
+    flex-basis: 70%;
     height: 250px;
-
     display: flex;
     flex-flow: column;
     justify-content: space-around;
-    padding: 0 2rem;
+
 
     h1 {
       font-size: 3rem;
       color: $tertiary;
       text-align: left;
+      padding: 1rem 1.5rem;
     }
     p {
-      font-size: 2.5rem;
+      font-size: $standard;
       color: $tertiary;
       text-align: left;
+      padding: $quote;
     }
   }
 }
 .testimony {
   // border: 1px solid red;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  flex-flow: column;
+
   .test_card {
     display: flex;
     flex-flow: row;
@@ -158,7 +150,7 @@ nav {
   }
   p.quote {
     background: #d3d3d3;
-    font-size: 2rem;
+    font-size: 1.5rem;
     flex-basis: 75%;
     padding: 1rem 2rem;
     display: flex;
@@ -167,22 +159,21 @@ nav {
     &::before {
       content: open-quote;
       position: relative;
-      bottom: 70px;
+      bottom: 80px;
       color: $primary;
       font-weight: bold;
-      font-size: 100px;
+      font-size: 60px;
     }
     &::after {
       content: close-quote;
       position: relative;
-      bottom: -70px;
+      bottom: -100px;
       color: $primary;
       font-weight: bold;
-      font-size: 100px;
+      font-size: 60px;
     }
   }
 }
-
 .gallery {
   background: #464646;
   .img_container {
@@ -210,22 +201,22 @@ nav {
     }
     .btn_container {
       button:first-child {
-border: 1px solid $tertiary;
-cursor: pointer;
-        background: lighten(#464646,15%);
+        border: 1px solid $tertiary;
+        cursor: pointer;
+        background: lighten(#464646, 15%);
         color: $primary;
         border-radius: 10px;
         font-size: 1.5rem;
         padding: 1rem 4rem;
         transition: all 1s ease-in-out;
 
-        &:hover{
+        &:hover {
           background: $tertiary;
         }
       }
       button:last-child {
-border: 1px solid $primary;
-cursor: pointer;
+        border: 1px solid $primary;
+        cursor: pointer;
         background: $primary;
         color: $tertiary;
         border-radius: 10px;
@@ -255,7 +246,7 @@ footer {
         li {
           a {
             text-decoration: none;
-            font-size: 2rem;
+            font-size: $quote;
             color: darken($secondary, 40%);
             &:hover {
               color: $tertiary;
@@ -279,7 +270,7 @@ footer {
         li {
           a {
             text-decoration: none;
-            font-size: 2rem;
+            font-size: $quote;
             color: darken($secondary, 40%);
             &:hover {
               color: $tertiary;
@@ -308,7 +299,7 @@ footer {
         li {
           a {
             text-decoration: none;
-            font-size: 2rem;
+            font-size: $quote;
             color: darken($secondary, 40%);
             transition: all 0.1s ease-in-out;
             &:hover {
@@ -329,7 +320,7 @@ footer {
       input {
         margin: 0;
         padding: 0;
-        width: 350px;
+        width: 300px;
         height: 75px;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
@@ -350,7 +341,7 @@ footer {
         color: $tertiary;
         border: 1px solid $primary;
         height: 75px;
-        width: 350px;
+        width: 300px;
         border-bottom-left-radius: 10px;
         border-bottom-right-radius: 10px;
         font-size: 1.5rem;
