@@ -76,8 +76,18 @@ nav {
     }
   }
 }
+
+// features container
 .features {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+
+
   .feat_container {
+    width: 95%;
+    display: flex;
+
   }
 }
 .account,
@@ -86,45 +96,54 @@ nav {
   background: $primary;
   height: 350px;
   display: flex;
-  align-items: center;
-  border-top: 1px solid $tertiary;
-  border-bottom: 1px solid $tertiary;
+  flex-flow: column;
+  padding: 1rem 2rem;
+
+
+  border-radius: 20px;
 
   i {
-    font-size: 6rem;
+    font-size: 4rem;
     color: $tertiary;
-    height: 250px;
     flex-basis: 30%;
     display: grid;
     place-items: center;
-    padding: 2.5rem 1rem;
   }
-  .icon-container {
+  .feat_section_info {
     flex-basis: 70%;
+
     height: 250px;
     display: flex;
     flex-flow: column;
     justify-content: space-around;
-
+    align-items: center;
 
     h1 {
-      font-size: 3rem;
+      font-size: 2.5rem;
       color: $tertiary;
       text-align: left;
-      padding: 1rem 1.5rem;
     }
     p {
-      font-size: $standard;
+      font-size: 1.5rem;
       color: $tertiary;
       text-align: left;
-      padding: $quote;
     }
   }
 }
+.account{
+  margin-right: 0.1rem;
+}
+.rewards{
+  margin-left:0.1rem;
+}
+
+// Testimonies section
 .testimony {
   // border: 1px solid red;
-
+  display: flex;
+  align-items: center;
   .test_card {
+    width: 95%;
     display: flex;
     flex-flow: row;
     justify-content: center;
@@ -142,7 +161,7 @@ nav {
       }
       p.name_tag {
         padding: 1rem 0.5rem;
-        font-size: 2rem;
+        font-size: 1.75rem;
         text-align: center;
         color: black;
       }
@@ -174,10 +193,11 @@ nav {
     }
   }
 }
+// gallery section.
 .gallery {
   background: #464646;
   .img_container {
-    height: 2100px;
+    height: 1700px;
     display: flex;
     flex-flow: column;
     justify-content: space-around;
@@ -193,25 +213,26 @@ nav {
     flex-flow: column;
     justify-content: space-around;
     align-items: center;
-    height: 200px;
     h1 {
       font-size: 3.5rem;
       text-align: center;
-      color: $tertiary;
+      padding: 1.5rem 1rem;
+      color: lighten($secondary, 5%);
     }
     .btn_container {
       button:first-child {
-        border: 1px solid $tertiary;
+        border: 2px solid $tertiary;
         cursor: pointer;
-        background: lighten(#464646, 15%);
-        color: $primary;
+        background: rgba(0, 0, 0, 0.1);
+        color: $tertiary;
         border-radius: 10px;
-        font-size: 1.5rem;
+        font-size: 1.25rem;
         padding: 1rem 4rem;
         transition: all 1s ease-in-out;
 
         &:hover {
           background: $tertiary;
+          color: $primary;
         }
       }
       button:last-child {
@@ -220,13 +241,13 @@ nav {
         background: $primary;
         color: $tertiary;
         border-radius: 10px;
-        font-size: 1.5rem;
+        font-size: 1.4rem;
         padding: 1rem 4rem;
       }
     }
   }
 }
-
+// footer section
 footer {
   .top {
     background: $secondary;
