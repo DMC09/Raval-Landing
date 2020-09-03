@@ -136,7 +136,7 @@ nav {
 
 // Testimonies section
 .testimony {
-border: 2px solid orange;
+  border: 2px solid orange;
   .testimony_container {
     display: flex;
     border: 2px solid green;
@@ -144,13 +144,15 @@ border: 2px solid orange;
   .test_card {
     border: 2px solid purple;
     display: flex;
+    height: 20rem;
     .profile_container {
       background: #d3d3d3;
       border: 2px solid red;
       text-align: center;
+      height: 50%;
       display: flex;
       flex-flow: column;
-      flex-basis: 25%;
+
       img {
         height: 100px;
         width: 100px;
@@ -164,17 +166,13 @@ border: 2px solid orange;
       }
     }
   }
-  .quote-container{
+  .quote-container {
     p.quote {
       background: #d3d3d3;
       border: 2px solid black;
-
-flex-basis: 75%;
-
-display: flex;
-
-align-items: center;
-height: 100%;
+      display: flex;
+      align-items: center;
+      height: 100%;
       &::before {
         content: open-quote;
         position: relative;
