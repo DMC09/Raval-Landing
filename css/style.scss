@@ -9,14 +9,14 @@ nav {
   display: flex;
   .logo-container {
     height: 100%;
-    flex-basis: 50%;
+    flex-basis: 75%;
     img {
       height: 100%;
       width: auto;
     }
   }
   ul {
-    flex-basis: 50%;
+    flex-basis: 25%;
     height: 100%;
     display: flex;
     justify-content: space-around;
@@ -80,12 +80,15 @@ nav {
 // features container
 .features {
   display: flex;
+  background: $primary;
   justify-content: center;
-  padding: 1rem 0;
+
+  height: 700px;
 
   .feat_container {
-    width: 95%;
+    width: 90%;
     display: flex;
+    margin-top: 5rem;
   }
 }
 .account,
@@ -96,8 +99,6 @@ nav {
   display: flex;
   flex-flow: column;
   padding: 1rem 2rem;
-
-  border-radius: 20px;
 
   i {
     font-size: 4rem;
@@ -136,71 +137,72 @@ nav {
 
 // Testimonies section
 .testimony {
-  border: 2px solid orange;
+  background: #d3d3d3;
+
+  padding: 2rem 1rem;
   .testimony_container {
     display: flex;
-    border: 2px solid green;
+    width: 90%;
+    margin: 0 auto;
   }
   .test_card {
-    border: 2px solid purple;
     display: flex;
     height: 20rem;
+    flex-flow: column;
+    justify-content: space-around;
+    background: #d3d3d3;
     .profile_container {
       background: #d3d3d3;
-      border: 2px solid red;
+
       text-align: center;
       height: 50%;
-      display: flex;
-      flex-flow: column;
 
       img {
         height: 100px;
         width: 100px;
         border-radius: 50%;
-        border: 2px solid black;
+
+        border: 2px solid $primary;
       }
       p.name_tag {
         text-align: center;
-        color: black;
-        border: 2px solid black;
+        color: $primary;
+        font-size: 1.5rem;
       }
     }
   }
   .quote-container {
     p.quote {
       background: #d3d3d3;
-      border: 2px solid black;
+      width: 66%;
+      margin: 0 auto;
       display: flex;
       align-items: center;
+      font-size: 1.1rem;
       height: 100%;
       &::before {
         content: open-quote;
         position: relative;
         color: $primary;
         font-weight: bold;
-        font-size: 60px;
+        font-size: 40px;
+        top: -40px;
       }
-      &::after {
-        content: close-quote;
-        position: relative;
-
-        color: $primary;
-        font-weight: bold;
-        font-size: 60px;
-      }
+    
     }
   }
 }
 // gallery section.
 .gallery {
   background: #464646;
+
   .img_container {
-    height: 1100px;
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    align-items: center;
-    padding: 1rem 0;
+    height: 900px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 2px;
+    place-items: center;
     img {
       @include img-bg;
     }
@@ -223,7 +225,7 @@ nav {
         cursor: pointer;
         background: rgba(0, 0, 0, 0.1);
         color: $tertiary;
-        border-radius: 10px;
+        s: 10px;
         font-size: 1.25rem;
         padding: 1rem 4rem;
         transition: all 1s ease-in-out;
@@ -238,7 +240,7 @@ nav {
         cursor: pointer;
         background: $primary;
         color: $tertiary;
-        border-radius: 10px;
+
         font-size: 1.4rem;
         padding: 1rem 4rem;
       }
@@ -253,7 +255,8 @@ footer {
     flex-flow: row;
     .legal {
       flex-basis: 50%;
-      padding: 1rem 1.5rem;
+      padding-left: 4rem;
+      padding-top: 1.5rem;
       p {
         @include footer-title;
       }
@@ -277,7 +280,8 @@ footer {
     }
     .resources {
       flex-basis: 50%;
-      padding: 1rem 1.5rem;
+      padding-left: 4rem;
+      padding-top: 1.5rem;
       p {
         @include footer-title;
       }
@@ -305,8 +309,9 @@ footer {
     display: flex;
     flex-flow: row;
     .socials {
-      flex-basis: 40%;
-      padding: 1rem 1.5rem;
+      flex-basis: 50%;
+      padding-left: 4rem;
+      padding-top: 1.5rem;
       p {
         @include footer-title;
       }
@@ -330,16 +335,16 @@ footer {
       }
     }
     .email {
-      flex-basis: 60%;
-
+      flex-basis: 50%;
       display: flex;
       flex-flow: column;
       justify-content: center;
       align-items: center;
+
       input {
         margin: 0;
         padding: 0;
-        width: 300px;
+        width: 500px;
         height: 75px;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
@@ -360,7 +365,7 @@ footer {
         color: $tertiary;
         border: 1px solid $primary;
         height: 75px;
-        width: 300px;
+        width: 500px;
         border-bottom-left-radius: 10px;
         border-bottom-right-radius: 10px;
         font-size: 1.5rem;
