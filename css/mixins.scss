@@ -1,12 +1,50 @@
-@mixin footer-title {
-  color: white;
-  font-size: 3rem;
-  margin-top: 2rem;
+@mixin img-bg {
+  height: 400px;
+  background: linear-gradient(45deg, #4b4b4b, #3f3f3f);
+  box-shadow: 6px -6px 15px #383838, -6px 6px 15px #545454;
 }
 
-@mixin img-bg {
-  height:400px;
-  background: linear-gradient(45deg, #4b4b4b, #3f3f3f);
-  box-shadow:  6px -6px 15px #383838,
-               -6px 6px 15px #545454;
+
+@mixin learnmore_btn {
+  border: 2px solid $tertiary;
+  cursor: pointer;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.1);
+  color: $tertiary;
+  padding: 1rem 4rem;
+  transition: all 1s ease-in-out;
+  &:hover {
+    background: $tertiary;
+    color: $primary;
+  }
+}
+
+@mixin apply_btn {
+  border: 1px solid $primary;
+  cursor: pointer;
+  background: $primary;
+  color: $tertiary;
+  border-radius: 20px;
+  padding: 1rem 4rem;
+}
+
+
+@mixin footer-title {
+  color: white;
+}
+@mixin footer_list {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-evenly;
+  li {
+    height: 100%;
+    a {
+      text-decoration: none;
+      color: darken($secondary, 40%);
+      &:hover {
+        color: $tertiary;
+        transform: scale(1.1);
+      }
+    }
+  }
 }
