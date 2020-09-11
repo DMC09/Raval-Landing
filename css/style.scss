@@ -94,7 +94,7 @@ nav {
 .account,
 .security,
 .rewards {
-  background: $primary;
+
   height: 350px;
   display: flex;
   flex-flow: column;
@@ -171,7 +171,17 @@ nav {
       }
     }
   }
+  .fas.fa-quote-left{
+
+margin: 0 auto;
+
+    text-align: center;
+    color: $secondary;
+font-size: 1.5rem;
+
+  }
   .quote-container {
+
     p.quote {
       background: #d3d3d3;
       width: 66%;
@@ -180,28 +190,21 @@ nav {
       align-items: center;
       font-size: 1.1rem;
       height: 100%;
-      &::before {
-        content: open-quote;
-        position: relative;
-        color: $primary;
-        font-weight: bold;
-        font-size: 40px;
-        top: -40px;
-      }
-    
     }
   }
 }
 // gallery section.
 .gallery {
   background: #464646;
-
+  display: flex;
+  flex-flow: column;
+  align-items: center;
   .img_container {
-    height: 900px;
+
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    grid-gap: 2px;
+    // grid-gap: 2px;
     place-items: center;
     img {
       @include img-bg;
