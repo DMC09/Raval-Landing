@@ -204,10 +204,10 @@ nav {
 // footer section
 footer {
   background: $secondary;
-  .top {
+  .footer_container {
     display: flex;
     justify-content: space-evenly;
-    width: 50%;
+    width: 100%;
     margin: 0 auto;
     .legal,
     .resources,
@@ -230,10 +230,14 @@ footer {
 @media only screen and (max-width: 600px) {
   nav {
     .logo-container {
-      background: red;
+
     }
     ul {
-      flex-basis: 33%;
+      flex-basis: 50%;
+      li a {
+        font-size: 1.15rem;
+
+      }
     }
   }
 
@@ -250,7 +254,7 @@ footer {
         font-size: 2rem;
       }
       p.learn_More{
-        font-size: 2rem;
+        font-size: 1.25rem;
       }
     }
   }
@@ -264,7 +268,15 @@ footer {
 
         .feat_section_info p {
           text-align: center;
+          width: 66%;
+          font-size:  1.25rem;
         }
+        .feat_section_info h1 {
+
+          font-size: 3rem;
+        }
+
+
       }
     }
   }
@@ -276,6 +288,7 @@ footer {
         .profile_container{
          p.name_tag{
            margin: 1rem 0;
+           font-size: 2rem;
          }
         }
         i.fas.fa-quote-left{
@@ -284,6 +297,7 @@ footer {
         .quote-container{
           p.quote{
             text-align: center;
+            font-size: 1.25rem;
           }
         }
       }
@@ -291,36 +305,63 @@ footer {
   }
   .gallery {
     .img_container {
-      border: 3px solid red;
+
       grid-template-columns: 1fr;
       grid-template-rows: repeat(4, 1fr);
       img {
-        height: 300px;
+        height: 250px;
       }
 
     }
     .btn_container {
      flex-flow: column;
+     button{
+       font-size: 1rem;
+     }
    }
   }
+  footer{
+    .footer_container{
 
-
-
-
+      flex-flow: column;
+text-align: center;
+      align-items: center;
+      .legal,.resources,.socials {
+        p{
+font-size: 1.5rem;
+        }
+        ul {
+          height: 75px;
+          li{
+            font-size: 1.15rem;
+            height: 60%;
+          }
+        }
+      }
+    }
+    .copyright_banner{
+background: #464646;
+color: $tertiary;
+      text-align: center;
+      font-size: 1.15rem;
+      padding: 1.25rem 0;
+    }
+  }
 }
-
 /* S devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
   nav .logo-container {
     background: orange;
   }
-  .features .feat_container {
-    display: initial;
-  }
+  .features {
+    .feat_container {
+      display: initial;
+      }
+    }
+
   .testimony .testimony_container {
     display: initial;
   }
-
   .gallery .img_container {
     border: 3px solid orange;
     grid-template-columns: 1fr;
