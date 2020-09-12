@@ -2,13 +2,14 @@
   height: 400px;
   background: linear-gradient(45deg, #4b4b4b, #3f3f3f);
   box-shadow: 6px -6px 15px #383838, -6px 6px 15px #545454;
+  border-radius: 10px;
 }
 
 
 @mixin learnmore_btn {
   border: 2px solid $tertiary;
   cursor: pointer;
-  border-radius: 20px;
+  border-radius: 10px;
   background: rgba(0, 0, 0, 0.1);
   color: $tertiary;
   padding: 1rem 4rem;
@@ -24,7 +25,7 @@
   cursor: pointer;
   background: $primary;
   color: $tertiary;
-  border-radius: 20px;
+  border-radius: 10px;
   padding: 1rem 4rem;
 }
 

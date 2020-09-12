@@ -1,7 +1,7 @@
 @import "./reset.css";
 @import "./vars.scss";
 @import "./mixins.scss";
-@import "./mquery.scss";
+
 // nav
 nav {
   height: 10vh;
@@ -35,12 +35,12 @@ nav {
   height: 90vh;
   background: url("../img/White-Modern-Background.jpg") no-repeat center
     center/cover;
-    display: flex;
-    justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
 
   .hero-info {
     h1 {
-margin-top: 8rem;
+      margin-top: 8rem;
       font-size: $plat_title;
       text-align: center;
       letter-spacing: 0.75rem;
@@ -81,7 +81,6 @@ margin-top: 8rem;
   display: flex;
   background: $primary;
   justify-content: center;
-  height: 700px;
   .feat_container {
     width: 90%;
     display: flex;
@@ -95,7 +94,7 @@ margin-top: 8rem;
       padding: 1rem 2rem;
       i {
         color: $tertiary;
-        flex-basis: 30%;
+        font-size: $icon_size;
         display: grid;
         place-items: center;
       }
@@ -110,6 +109,7 @@ margin-top: 8rem;
         h1 {
           color: $tertiary;
           text-align: left;
+          font-size: $feat_title;
         }
         p {
           color: $tertiary;
@@ -140,15 +140,12 @@ margin-top: 8rem;
       }
       .profile_container {
         background: #d3d3d3;
-
         text-align: center;
-        height: 50%;
 
         img {
           height: 100px;
           width: 100px;
           border-radius: 50%;
-
           border: 2px solid $primary;
         }
         p.name_tag {
@@ -188,23 +185,19 @@ margin-top: 8rem;
       @include img-bg;
     }
   }
-  .cta_container {
-    padding: 1rem 0.5rem;
+
+  h1 {
+    text-align: center;
+    padding: 1.5rem 1rem;
+    color: lighten($secondary, 5%);
+  }
+  .btn_container {
     display: flex;
-
-
-    h1 {
-      text-align: center;
-      padding: 1.5rem 1rem;
-      color: lighten($secondary, 5%);
+    button:first-child {
+      @include learnmore_btn;
     }
-    .btn_container {
-      button:first-child {
-        @include learnmore_btn;
-      }
-      button:last-child {
+    button:last-child {
       @include apply_btn;
-      }
     }
   }
 }
@@ -230,5 +223,154 @@ footer {
         @include footer_list;
       }
     }
+  }
+}
+// ••••••••••••••• Media Queries  •••••••••••••••••••••••••••••••••••••••••••••
+/* ES  devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  nav {
+    .logo-container {
+      background: red;
+    }
+    ul {
+      flex-basis: 33%;
+    }
+  }
+
+  .hero {
+    flex-flow: column;
+    .hero-info{
+      h1{
+        font-size: 6rem;
+      }
+    }
+    .card-container{
+      p.slogan{
+        text-align: center;
+        font-size: 2rem;
+      }
+      p.learn_More{
+        font-size: 2rem;
+      }
+    }
+  }
+  .features {
+    .feat_container {
+      flex-flow: column;
+      .account,
+      .security,
+      .rewards {
+        padding: initial;
+
+        .feat_section_info p {
+          text-align: center;
+        }
+      }
+    }
+  }
+  .testimony {
+    .testimony_container {
+      flex-flow: column;
+      .test_card {
+        justify-content: center;
+        .profile_container{
+         p.name_tag{
+           margin: 1rem 0;
+         }
+        }
+        i.fas.fa-quote-left{
+          margin: 1rem 0;
+        }
+        .quote-container{
+          p.quote{
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+  .gallery {
+    .img_container {
+      border: 3px solid red;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(4, 1fr);
+      img {
+        height: 300px;
+      }
+
+    }
+    .btn_container {
+     flex-flow: column;
+   }
+  }
+
+
+
+
+}
+
+/* S devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  nav .logo-container {
+    background: orange;
+  }
+  .features .feat_container {
+    display: initial;
+  }
+  .testimony .testimony_container {
+    display: initial;
+  }
+
+  .gallery .img_container {
+    border: 3px solid orange;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    img {
+      height: 250px;
+    }
+  }
+  .hero {
+    flex-flow: column;
+  }
+}
+/* M devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  nav .logo-container {
+    background: yellow;
+  }
+  .hero {
+    flex-flow: column;
+  }
+}
+/* L devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  nav .logo-container {
+    background: green;
+  }
+
+  .gallery .img_container {
+    border: 3px solid green;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    img {
+      height: 350px;
+    }
+  }
+  .hero {
+    flex-flow: column;
+  }
+}
+/*  XL devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  nav .logo-container {
+    background: blue;
+  }
+  .gallery .img_container {
+    border: 3px solid blue;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .hero {
+    flex-flow: row;
   }
 }
