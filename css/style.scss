@@ -463,17 +463,10 @@ footer {
 }
 /* M devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-
-}
-/* L devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-
-}
-/*  XL devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-
   nav {
-
+    ul {
+      flex-basis: 33%;
+    }
     .logo-container {
     }
     ul {
@@ -502,8 +495,8 @@ footer {
   }
   .features {
     .feat_container {
-display: flex;
-flex-flow: row;
+      display: flex;
+      flex-flow: row;
       .account,
       .security,
       .rewards {
@@ -549,7 +542,132 @@ flex-flow: row;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
       img {
-        height:  400px;
+        height: 300px;
+      }
+    }
+    .btn_container {
+      flex-flow: row;
+      justify-content: space-around;
+      width: 500px;
+      button {
+        font-size: 1rem;
+      }
+    }
+  }
+  footer {
+    .footer_container {
+      flex-flow: row;
+      text-align: center;
+      align-items: center;
+      .legal,
+      .resources,
+      .socials {
+        display: flex;
+        flex-flow: column;
+        p {
+          font-size: 1.5rem;
+        }
+        ul {
+          height: 75px;
+          li {
+            font-size: 1.15rem;
+            height: 60%;
+          }
+        }
+      }
+    }
+    .copyright_banner {
+      background: #464646;
+      color: $tertiary;
+      text-align: center;
+      font-size: 1.15rem;
+      padding: 1rem 0;
+    }
+  }
+}
+/* L devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+  nav {
+    ul {
+      flex-basis: 33%;
+    }
+    .logo-container {
+    }
+    ul {
+      flex-basis: 50%;
+      li a {
+        font-size: 1.15rem;
+      }
+    }
+  }
+  .hero {
+    flex-flow: column;
+    .hero-info {
+      h1 {
+        font-size: 6rem;
+      }
+    }
+    .card-container {
+      p.slogan {
+        text-align: center;
+        font-size: 2rem;
+      }
+      p.learn_More {
+        font-size: 1.25rem;
+      }
+    }
+  }
+  .features {
+    .feat_container {
+      display: flex;
+      flex-flow: row;
+      .account,
+      .security,
+      .rewards {
+        padding: initial;
+
+        .feat_section_info p {
+          text-align: center;
+          width: 66%;
+          font-size: 1.25rem;
+        }
+        .feat_section_info h1 {
+          font-size: 3rem;
+        }
+      }
+    }
+  }
+  .testimony {
+    .testimony_container {
+      display: flex;
+      flex-flow: row;
+      .test_card {
+        justify-content: center;
+        .profile_container {
+          p.name_tag {
+            margin: 1rem 0;
+            font-size: 2rem;
+          }
+        }
+        i.fas.fa-quote-left {
+          margin: 1rem 0;
+        }
+        .quote-container {
+          p.quote {
+            text-align: center;
+            font-size: 1.25rem;
+          }
+        }
+      }
+    }
+  }
+  .gallery {
+    .img_container {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      img {
+        height: 400px;
       }
     }
     .btn_container {
@@ -592,4 +710,129 @@ flex-flow: row;
     }
   }
 
+
+}
+/*  XL devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  nav {
+    ul {
+      flex-basis: 33%;
+    }
+    .logo-container {
+    }
+    ul {
+      flex-basis: 50%;
+      li a {
+        font-size: 1.15rem;
+      }
+    }
+  }
+  .hero {
+    flex-flow: column;
+    .hero-info {
+      h1 {
+        font-size: 6rem;
+      }
+    }
+    .card-container {
+      p.slogan {
+        text-align: center;
+        font-size: 2rem;
+      }
+      p.learn_More {
+        font-size: 1.25rem;
+      }
+    }
+  }
+  .features {
+    .feat_container {
+      display: flex;
+      flex-flow: row;
+      .account,
+      .security,
+      .rewards {
+        padding: initial;
+
+        .feat_section_info p {
+          text-align: center;
+          width: 66%;
+          font-size: 1.25rem;
+        }
+        .feat_section_info h1 {
+          font-size: 3rem;
+        }
+      }
+    }
+  }
+  .testimony {
+    .testimony_container {
+      display: flex;
+      flex-flow: row;
+      .test_card {
+        justify-content: center;
+        .profile_container {
+          p.name_tag {
+            margin: 1rem 0;
+            font-size: 2rem;
+          }
+        }
+        i.fas.fa-quote-left {
+          margin: 1rem 0;
+        }
+        .quote-container {
+          p.quote {
+            text-align: center;
+            font-size: 1.25rem;
+          }
+        }
+      }
+    }
+  }
+  .gallery {
+    .img_container {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      img {
+        height: 400px;
+      }
+    }
+    .btn_container {
+      flex-flow: row;
+      justify-content: space-around;
+      width: 500px;
+      button {
+        font-size: 1rem;
+      }
+    }
+  }
+  footer {
+    .footer_container {
+      flex-flow: row;
+      text-align: center;
+      align-items: center;
+      .legal,
+      .resources,
+      .socials {
+        display: flex;
+        flex-flow: column;
+        p {
+          font-size: 1.5rem;
+        }
+        ul {
+          height: 75px;
+          li {
+            font-size: 1.15rem;
+            height: 60%;
+          }
+        }
+      }
+    }
+    .copyright_banner {
+      background: #464646;
+      color: $tertiary;
+      text-align: center;
+      font-size: 1.15rem;
+      padding: 1rem 0;
+    }
+  }
 }
