@@ -19,7 +19,7 @@ nav {
     flex-basis: 25%;
     height: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     li {
       text-decoration: none;
@@ -33,14 +33,15 @@ nav {
 //hero section
 .hero {
   height: 90vh;
+
   background: url("../img/White-Modern-Background.jpg") no-repeat center
     center/cover;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 
   .hero-info {
     h1 {
-      margin-top: 8rem;
+      margin-top: 4rem;
       font-size: $plat_title;
       text-align: center;
       letter-spacing: 0.75rem;
@@ -67,7 +68,7 @@ nav {
     }
     p.learn_More {
       font-size: 1.5rem;
-      margin: 1rem 0;
+      margin: 0.5rem 0;
       color: $primary;
     }
     i {
@@ -242,12 +243,19 @@ footer {
   }
   .hero {
     flex-flow: column;
+    justify-content: center;
     .hero-info {
       h1 {
         font-size: 6rem;
       }
     }
     .card-container {
+      img{
+
+        height: 350px;
+        width: 450px;
+      }
+
       p.slogan {
         text-align: center;
         font-size: 2rem;
@@ -257,6 +265,7 @@ footer {
       }
     }
   }
+
   .features {
     .feat_container {
       flex-flow: column;
@@ -362,9 +371,11 @@ footer {
     .hero-info {
       h1 {
         font-size: 6rem;
+
       }
     }
     .card-container {
+
       p.slogan {
         text-align: center;
         font-size: 2rem;
@@ -724,7 +735,7 @@ footer {
     ul {
       flex-basis: 50%;
       li a {
-        font-size: 1.15rem;
+        font-size: 1.5rem;
       }
     }
   }
