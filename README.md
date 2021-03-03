@@ -1,5 +1,5 @@
 ## Raval Landing Page
-A landing page for the Red Leaf Bistro.
+A landing page for the new Raval Card.
 <br /> [Live](https://dmc09.github.io/Raval-Landing/)
 
 ## Tech stack
@@ -7,7 +7,7 @@ A landing page for the Red Leaf Bistro.
 * CSS
 
 
-A landing page for the new Raval Card.
+
 
 
 ## Screenshots
