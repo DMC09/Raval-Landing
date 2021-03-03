@@ -7,9 +7,6 @@ A landing page for the new Raval Card.
 * CSS
 
 
-
-
-
 ## Screenshots
 
 
